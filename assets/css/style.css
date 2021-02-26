@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    
+}
+.container {
+    margin: auto;
+    padding: auto;
+    position: relative;
+    height: 100vh;
+    background-image: url("../images/forest.png"), url("../images/grass.png"), url("../images/2904084efb988b40bea550196067fe18.gif");  
+    background-position: left bottom, bottom;
+    background-repeat: no-repeat, repeat-x, no-repeat;
+    background-size: 600px 600px, 200px 200px, 1920px 1080px;
+    overflow: hidden;
+}
+
+/* MENU */
+.dropdown {
+    width: 192.5px;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    margin: 7px 0px;
+    background-color: rgb(0, 0, 0, 0.3); 
+}
+
+.dropdown:hover {
+    background-color: grey;
+    color: white;
+    align-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;  
+}
+
+/* HUNTER */
+.hunter {
+    background-image: url("../images/Radost\ strelec123.png");
+    background-size: cover;
+    width: 118px;
+    height: 200px;
+    animation-name: hunter_cycle;
+    animation-timing-function:steps(4);
+    animation-iteration-count:initial;
+    animation-duration: 2s;
+    animation-delay: -0.5s;
+}
+
+.hunter_container {
+    position: absolute;
+    bottom: 1%;
+    left: 26%;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    animation-name: hunter;
+}
+
+/* RINNING_MAN */
+.running_man {
+    background-image: url("../images/Radost\ rinning\ 1234.png");
+    background-size: cover;
+    width: 130px;
+    height: 150px;
+    animation-name: running_cycle;
+    animation-timing-function:steps(8);
+    animation-iteration-count:initial;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.running_man_container {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    animation-name: running_man;
+    animation-timing-function: linear;
+    animation-iteration-count:inherit;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+
+/* ARROW */
+.arrow {
+    background-image: url("../images/arrow.png");
+    background-size: cover;
+    width: 120px;
+    height: 50px;
+    animation-name: arrow_cycle;
+    animation-timing-function:steps(8);
+    animation-iteration-count:initial;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    /* border: 1px solid red; */
+}
+
+.arrow_container {
+    position: absolute;
+    bottom: 10.5%;
+    left: 27%;
+    /* transform: scale(0) translateX(-1vh); */
+    animation-name: arrow;
+    animation-timing-function: linear;
+    animation-iteration-count:initial;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+/* AIRPLANE */
+.airplane {
+    background-image: url("../images/Airplane4.png");
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 240px;
+    animation-name: airplane_cycle;
+    animation-timing-function:linear;
+    animation-iteration-count: initial;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+
+.airplane_container {
+    position: absolute;
+    bottom: 70%;
+    right: -33%;
+    /* transform: scale(0) translateX(-1vh); */
+    animation-name: airplane;
+    animation-timing-function: linear;
+    animation-iteration-count:initial;
+    animation-duration: 15s;
+    animation-delay: 9s;   
+}
+
+/* KARA */
+.kara {
+    background-image: url("../images/kara123456.png");
+    background-size: cover;
+    width: 97px;
+    height: 195px;
+    animation-name: kara_cycle;
+    animation-timing-function:steps(14);
+    animation-iteration-count:inherit;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.kara_container {
+    position: absolute;
+    bottom: 1%;
+    right: -5%;
+    animation-name: kara;
+    animation-timing-function: linear;
+    animation-iteration-count:inherit;
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+
+
+@keyframes kara_cycle {
+    100% {
+        background-position: -1785px 0;
+    }
+}
+
+@keyframes hunter_cycle {
+    100% {
+        background-position: -533px 0px;
+    }
+}
+
+@keyframes running_cycle {
+    100% {
+        background-position: 1125px 0;
+    }
+}
+
+@keyframes arrow_cycle {
+    100% {
+        background-position: center;
+    }
+}
+
+@keyframes airplane_cycle {
+    100% {
+        background-position: center;
+    }
+}
+
+/* KARA */
+@keyframes kara {
+    0% {
+        transform: translateX(0) scale(0.8)
+    }
+    10% {
+        transform: translateY(2vh) translateX(-10vh) scale(0.8);
+    }
+    20% {
+        transform: translateY(0) translateX(-20vh) scale(0.8);
+    }
+    30% {
+        transform: translateY(4vh) translateX(-35vh) scale(0.8);
+    }
+    40% {
+        transform: translateY(2vh) translateX(-45vh) scale(0.8);
+    }
+    50% {
+        transform: translateY(0vh) translateX(-30vh) scale(0.8);
+    }
+    60% {
+        transform: translateY(0vh) translateX(-5vh) scale(0.8);
+    }
+    100% {
+        transform: translateY(0vh) translateX(-0vh) scale(0.8);
+    }
+}
+    
+/* RUNNING_MAN */
+@keyframes running_man {
+    0% {
+        transform: translateX(-1vh) scale(0.8)
+    }
+    10% {
+        transform: translateY(2vh) translateX(10vh) scale(0.8);
+    }
+    20% {
+        transform: translateY(0) translateX(20vh) scale(0.8);
+    }
+    30% {
+        transform: translateY(4vh) translateX(35vh) scale(0.8);
+    }
+    40% {
+        transform: translateY(2vh) translateX(45vh) scale(0.8);
+    }
+    50% {
+        transform: translateY(0vh) translateX(60vh) scale(0.8);
+    }
+    60% {
+        transform: translateY(0vh) translateX(75vh) scale(0.8);
+    }
+    100% {
+        transform: translateY(0vh) translateX(150vh) scale(0.8);
+    }
+}
+
+/* ARROW */
+@keyframes arrow {
+    0% {
+        transform: translateX(0) scale(0.8)
+    }
+    10% {
+        transform: translateY(0) translateX(10vh) scale(0.8);
+    }
+    20% {
+        transform: translateY(0) translateX(30vh) scale(0.8);
+    }
+    30% {
+        transform: translateY(0) translateX(50vh) scale(0.8);
+    }
+    40% {
+        transform: translateY(0) translateX(70vh) scale(0.8);
+    }
+    50% {
+        transform: translateY(0) translateX(90vh) scale(0.8);
+    }
+    60% {
+        transform: translateY(0) translateX(110vh) scale(0.8);
+    }
+    100% {
+        transform: translateY(0) translateX(200vh) scale(0.8);
+    }
+}
+
+/* airplane */
+@keyframes airplane {
+    0% {
+        transform: translateX(0) scale(0.8)
+    }
+    10% {
+        transform: translateY(6vh) translateX(-10vh) scale(0.8);
+    }
+    20% {
+        transform: translateY(0) translateX(-30vh) scale(0.8);
+    }
+    30% {
+        transform: translateY(6vh) translateX(-50vh) scale(0.8);
+    }
+    40% {
+        transform: translateY(0) translateX(-300vh) scale(0.8);
+    }
+    50% {
+        transform: translateY(6vh) translateX(-400vh) scale(0.8);
+    }
+    60% {
+        transform: translateY(0) translateX(-500vh) scale(0.8);
+    }
+    70% {
+        transform: translateY(6vh) translateX(-600vh) scale(0.8);
+    }
+    80% {
+        transform: translateY(0vh) translateX(-700vh) scale(0.8);
+    }
+    90% {
+        transform: translateY(6vh) translateX(-800vh) scale(0.8);
+    }
+    100% {
+        transform: translateY(0vh) translateX(-900vh) scale(0.8);
+    }
+    110% {
+        transform: translateY(6vh) translateX(-1000vh) scale(0.8);
+    }
+}
+
+
+
+
+
+
+    
